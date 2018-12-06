@@ -15407,7 +15407,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>f. 现在，你一定在考虑其他可能影响用户是否发生转化的因素。讨论为什么考虑将其他因素添加到回归模型中是一个不错的主意。在回归模型中添加附加项有什么弊端吗？</p>
-<p>只考虑landing_page一个变量对converted的影响也许并不充分，模型可能会欠拟合。如果加入其它变量会让模型拟合的更好，但是过多的变量也许会让模型变得过拟合。</p>
+<p>只考虑landing_page一个变量对converted的影响也许并不充分，模型可能会欠拟合。如果加入其它变量会让模型拟合的更好，但是过多的变量也许会让模型变得过拟合，甚至有可能加入一些会破坏模型的离群值或杠杆点。</p>
 
 </div>
 </div>
@@ -15679,6 +15679,7 @@ df3['new_UK'] = df3['new_page'] * df3['UK']</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>不会对结果产生重大影响</p>
+<p>综合上述分析结果，不推荐商家发布新页面</p>
 
 </div>
 </div>
